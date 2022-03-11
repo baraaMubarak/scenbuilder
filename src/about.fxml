@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerAbout">
+   <children>
+      <VBox alignment="CENTER" prefHeight="400.0" prefWidth="601.0">
+         <children>
+            <Label prefHeight="54.0" prefWidth="293.0" text="Baraa M Mubarak" textFill="#31a176">
+               <font>
+                  <Font name="Monotype Corsiva" size="42.0" />
+               </font>
+            </Label>
+            <Label text="120201002" textFill="#31a176">
+               <font>
+                  <Font name="System Bold" size="42.0" />
+               </font>
+            </Label>
+            <Label text="I study at the Islamic University of Information Technology,&#10;and this is the assignment of the 3rd Programming Course&#10;in which Dr. Abd Al-Karim Al-Ashkar teaches me." textFill="#31a176">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

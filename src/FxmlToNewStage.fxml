@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.web.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="599.0" prefWidth="701.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FxmlToNewStage">
+   <top>
+      <BorderPane prefHeight="131.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <top>
+            <MenuBar fx:id="menuBar" BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem fx:id="open" mnemonicParsing="false" onAction="#menuOpen" text="Open" />
+                        <MenuItem fx:id="save" mnemonicParsing="false" onAction="#saveMenu" text="Save" />
+                        <MenuItem fx:id="close" mnemonicParsing="false" onAction="#closeMenu" text="Close" />
+                        <MenuItem fx:id="exist" mnemonicParsing="false" onAction="#existMenu" text="exist" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Color">
+
+                  <items>
+                        <RadioMenuItem fx:id="cyanColor" mnemonicParsing="false" onAction="#cyanMenu" text="Cyan">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="a" />
+                           </toggleGroup></RadioMenuItem>
+                        <RadioMenuItem fx:id="redColor" mnemonicParsing="false" onAction="#redMenu" text="Red" toggleGroup="$a" />
+                        <RadioMenuItem fx:id="blueColor" mnemonicParsing="false" onAction="#blueMenu" text="Blue" toggleGroup="$a" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="About">
+                  <items>
+                    <MenuItem fx:id="about" mnemonicParsing="false" onAction="#aboutMenu" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+         <left>
+            <TextArea fx:id="textArea" prefHeight="175.0" prefWidth="319.0" text="I love my teacher but its hate me." BorderPane.alignment="CENTER" />
+         </left>
+         <bottom>
+            <Slider fx:id="slider" blockIncrement="5.0" majorTickUnit="5.0" max="35.0" minorTickCount="1" onMouseClicked="#onSliderChanged" prefHeight="1.0" prefWidth="600.0" showTickLabels="true" showTickMarks="true" value="16.0" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="30.0" top="30.0" />
+               </BorderPane.margin>
+            </Slider>
+         </bottom>
+      </BorderPane>
+   </top>
+   <bottom>
+      <HBox prefHeight="397.0" prefWidth="701.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <ComboBox fx:id="comboBox" onAction="#onAction" prefWidth="150.0" />
+            <WebView fx:id="webView" prefHeight="397.0" prefWidth="570.0" />
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>
